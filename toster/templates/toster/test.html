@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>тест</title>
+</head>
+<body>
+    <img src="{% static 'toster/img/4.gif' %}" alt="">
+    <table border="1">
+        <form action="" method="post">{% csrf_token %}
+        <tr><td>Вопросы</td><td>Ответы</td></tr>
+        <tr><td>{{Q1}}</td><td><input type="text" id="A1" name="A1"></td></tr>
+        <tr><td>{{Q2}}</td><td><input type="text" id="A2" name="A2"></td></tr>
+        <tr><td>{{Q3}}</td><td><input type="text" id="A3" name="A3"></td></tr>
+        <tr><td>{{Q4}}</td><td><input type="text" id="A4" name="A4"></td></tr>
+        <tr><td>{{Q5}}</td><td><input type="text" id="A5" name="A5"></td></tr>
+            <input type="submit" value="Отправить">
+        </form>
+    </table>
+    <a href="result">Посмотреть результаты</a>
+</body>
+</html>

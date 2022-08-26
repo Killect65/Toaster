@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты теста</title>
+</head>
+<body>
+<table><tr><td><img src="{% static 'toster/img/3.gif' %}" alt=""></td><td><img src="{% static 'toster/img/5.gif' %}" alt=""></td></tr></table>
+<p>Ваш результат - {{ result }}
+    {% if result == 0 or result == 5 %}
+        баллов
+    {% endif %}
+    {% if result == 1 %}
+        балл
+    {% endif %}
+    {% if result == 2 or result == 3 or result == 4 %}
+        баллa
+    {% endif %}
+    </p>
+<p>Вы допустили ошибки в следующих вопросах: {{ mistakes }}</p>
+</body>
+</html>
